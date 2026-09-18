@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  incident-platform:
+    build: .
+    container_name: incident_response_app
+    ports:
+      - "8501:8501"
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    volumes:
+      - ./data:/app/data
+    restart: always
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama_service
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_storage:/root/.ollama
+    restart: always
+
+volumes:
+  ollama_storage:

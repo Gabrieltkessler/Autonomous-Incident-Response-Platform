@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+torch
+spacy
+faiss-cpu
+sentence-transformers
+fastmcp
+langchain
+langchain-community
+ollama
+streamlit
+ragas
