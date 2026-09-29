@@ -1,4 +1,4 @@
-# 🚨 AI-Driven Incident Response Platform
+# 🚨 Autonomous Incident Response Platform
 
 An autonomous, full-stack monitoring and remediation system built with Python, Streamlit, FAISS, SpaCy, FastMCP, and local LLMs via Ollama. Fully containerized with Docker & Docker Compose.
 
