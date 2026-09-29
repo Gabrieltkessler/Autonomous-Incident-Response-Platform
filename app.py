@@ -69,7 +69,7 @@ with tab3:
     st.subheader("Agent Diagnostic Execution")
     incident_log = st.text_input(
         "Simulate Active Incident Log:",
-        "CRITICAL Connection timeout to database cluster route /api/v1/checkout"
+        "CRITICAL HTTP 500 failure from IP: 10.0.0.45 route /api/v1/checkout"
     )
     
     if st.button("Trigger AI Incident Agent"):
