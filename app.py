@@ -7,7 +7,7 @@ from src.agent import IncidentResponseAgent
 
 st.set_page_config(page_title="AI Incident Response Platform", layout="wide")
 
-st.title("🚨 AI-Driven Incident Response Platform")
+st.title("🚨 Autonomous Incident Response Platform")
 st.markdown("Real-time telemetry, anomaly detection, RAG runbooks, and FastMCP diagnostics.")
 
 # Sidebar Controls

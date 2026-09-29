@@ -17,10 +17,12 @@ Modern cloud infrastructure generates thousands of raw telemetry logs per minute
 
 ## 🏗️ Architecture & Pipeline
 
+```
 [ Telemetry Logs ] ──> [ SpaCy Log Parser ] ──> [ ML Anomaly Detector ]
-│
-▼
+                                                         │
+                                                         ▼
 [ FastMCP Tools ] <── [ Ollama (Llama 3.1) ] <── [ FAISS Vector Store ]
+```
 
 ---
 
@@ -45,14 +47,23 @@ Modern cloud infrastructure generates thousands of raw telemetry logs per minute
    ```bash
    git clone [https://github.com/Gabrieltkessler/ai-incident-response-platform.git](https://github.com/Gabrieltkessler/ai-incident-response-platform.git)
    cd ai-incident-response-platform
+   ```
 
-Launch via Docker Compose:
+2. **Launch via Docker Compose:**
+   ```bash
+   docker-compose up --build -d
+   ```
 
-Bash
-docker-compose up --build -d
+3. **Access the Dashboard:**
+   Open your browser and navigate to `http://localhost:8501`.
 
-Access the Dashboard:
-Open your browser and navigate to http://localhost:8501.
+---
 
-Evaluation & Testing:
+## 🧪 Evaluation & Testing
+
+The platform includes an automated evaluation harness verifying the agent's log parsing precision, vector retrieval accuracy, and tool execution success.
+
+Run local tests:
+```bash
 python -m pytest tests/
+```
