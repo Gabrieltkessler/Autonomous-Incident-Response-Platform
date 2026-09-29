@@ -91,8 +91,7 @@ class IncidentResponseAgent:
             "parsed_log": parsed_entity,
             "recommended_runbook": matched_runbook,
             "diagnostics": executed_diagnostics,
-            "action_taken": action_taken,
-            "llm_reasoning": response.get("message", {}).get("content", "")
+            "action_taken": action_taken
         }
 
 if __name__ == "__main__":
